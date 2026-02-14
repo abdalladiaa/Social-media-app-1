@@ -1,5 +1,5 @@
 export const headersObjData = {
   headers: {
-    token: localStorage.getItem("token"),
+    Authorization: `Bearer ${localStorage.getItem("token")}`,
   },
 };
