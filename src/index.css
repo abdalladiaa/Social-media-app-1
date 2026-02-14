@@ -1,0 +1,71 @@
+@import "tailwindcss";
+@import "flowbite-react/plugin/tailwindcss";
+@source "../.flowbite-react/class-list.json";
+
+/* default link */
+body{
+  background-color: #F2F4F7;
+}
+.nav-link {
+  padding: 8px 14px;
+  border-radius: 14px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #374151; 
+  transition: all 0.2s ease;
+}
+
+
+.nav-link:hover {
+  background-color: #f3f4f6;
+}
+
+.nav-link.active {
+  color: #4f46e5; 
+  background-color: #eef2ff; 
+}
+
+.window {
+  width: 400px;
+  min-height: 380px;
+  padding: 40px;
+  border: 1px solid white;
+  border-radius: 20px;
+
+  background-color: white;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  color: black;
+}
+
+@layer utilities {
+  .dark\:bg-gray-800 {
+    @media (prefers-color-scheme: dark) {
+      background-color: #ffffff;
+    }
+  }
+  .dark\:text-white {
+    @media (prefers-color-scheme: dark) {
+      color: #000000;
+    }
+  }
+  .dark\:text-gray-400 {
+    @media (prefers-color-scheme: dark) {
+      color: #000000;
+    }
+  }
+  .md\:dark\:hover\:text-white {
+    @media (width >= 48rem) {
+      @media (prefers-color-scheme: dark) {
+        &:hover {
+          @media (hover: hover) {
+            color: #999999;
+          }
+        }
+      }
+    }
+  }
+}
